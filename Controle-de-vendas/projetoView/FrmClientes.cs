@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controle_de_vendas.projetoModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,27 @@ namespace Controle_de_vendas.projetoView
 
         private void label7_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
+            Cliente obj = new Cliente();
+
+            obj.codigo = txtcodigo.Text;
+            obj.nome = txtnome.Text;
+            obj.rg = txtrg.Text;
+            obj.cpf = txtcpf.Text;
+            obj.email = txtemail.Text;
+            obj.telefone = txttelefone.Text;
+            obj.celular = txtcelular.Text;
+            obj.endereco = txtendereco.Text;
+            obj.complemento = txtcomplemento.Text;
+            obj.numero = txtnumero.Number;
+            obj.bairro = txtbairro.Text;
+            obj.cidade = txtcidade.Text;
+            obj.uf = cbuf.Text;
+            obj.cep = txtcep.Text;
 
         }
     }

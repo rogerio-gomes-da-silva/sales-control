@@ -354,7 +354,7 @@
             // txtcpf
             // 
             this.txtcpf.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtcpf.Location = new System.Drawing.Point(840, 59);
+            this.txtcpf.Location = new System.Drawing.Point(840, 75);
             this.txtcpf.Mask = "###.###.###-##";
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(139, 26);
@@ -365,7 +365,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(801, 66);
+            this.label6.Location = new System.Drawing.Point(801, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 20);
             this.label6.TabIndex = 10;
@@ -374,7 +374,7 @@
             // txtrg
             // 
             this.txtrg.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtrg.Location = new System.Drawing.Point(584, 59);
+            this.txtrg.Location = new System.Drawing.Point(584, 75);
             this.txtrg.Mask = "##.###.###-##";
             this.txtrg.Name = "txtrg";
             this.txtrg.Size = new System.Drawing.Size(139, 26);
@@ -385,7 +385,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(554, 66);
+            this.label5.Location = new System.Drawing.Point(554, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 20);
             this.label5.TabIndex = 8;
@@ -515,6 +515,7 @@
             this.btnsalvar.TabIndex = 5;
             this.btnsalvar.Text = "Salvar";
             this.btnsalvar.UseVisualStyleBackColor = false;
+            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
             // txtpesquisa
             // 
