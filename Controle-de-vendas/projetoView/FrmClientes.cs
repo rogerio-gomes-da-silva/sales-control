@@ -1,4 +1,5 @@
-﻿using Controle_de_vendas.projetoModel;
+﻿using Controle_de_vendas.projetoDao;
+using Controle_de_vendas.projetoModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,7 +68,6 @@ namespace Controle_de_vendas.projetoView
         {
             Cliente obj = new Cliente();
 
-            obj.codigo = txtcodigo.Text;
             obj.nome = txtnome.Text;
             obj.rg = txtrg.Text;
             obj.cpf = txtcpf.Text;
@@ -76,12 +76,20 @@ namespace Controle_de_vendas.projetoView
             obj.celular = txtcelular.Text;
             obj.endereco = txtendereco.Text;
             obj.complemento = txtcomplemento.Text;
-            obj.numero = txtnumero.Number;
+            obj.numero = int.Parse(txtnumero.Text);
             obj.bairro = txtbairro.Text;
             obj.cidade = txtcidade.Text;
             obj.uf = cbuf.Text;
             obj.cep = txtcep.Text;
 
+            ClienteDAO dao = new ClienteDAO();
+            dao.cadastrarCliente(obj);
+        }
+
+        private void FrmClientes_Load(object sender, EventArgs e)
+        {
+            ClienteDAO dao = new ClienteDAO();
+                tabelaCliente.DataSource = dao.listarClientes();
         }
     }
 }

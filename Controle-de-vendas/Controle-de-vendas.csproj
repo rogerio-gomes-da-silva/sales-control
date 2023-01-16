@@ -91,6 +91,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="projetoConexao\ConnectionFactory.cs" />
+    <Compile Include="projetoDao\ClienteDAO.cs" />
+    <Compile Include="projetoModel\Cliente.cs" />
     <Compile Include="projetoView\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,10 +127,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="projetoConexao\" />
-    <Folder Include="projetoDao\" />
-    <Folder Include="projetoModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

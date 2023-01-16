@@ -61,14 +61,14 @@
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabelaCliente = new System.Windows.Forms.DataGridView();
+            this.btnpesquisar = new System.Windows.Forms.Button();
+            this.txtpesquisa = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.btnnovo = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
-            this.txtpesquisa = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnpesquisar = new System.Windows.Forms.Button();
-            this.tabelaCliente = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -468,6 +468,49 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // tabelaCliente
+            // 
+            this.tabelaCliente.AllowUserToAddRows = false;
+            this.tabelaCliente.AllowUserToDeleteRows = false;
+            this.tabelaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelaCliente.Location = new System.Drawing.Point(32, 62);
+            this.tabelaCliente.Name = "tabelaCliente";
+            this.tabelaCliente.ReadOnly = true;
+            this.tabelaCliente.Size = new System.Drawing.Size(980, 371);
+            this.tabelaCliente.TabIndex = 8;
+            // 
+            // btnpesquisar
+            // 
+            this.btnpesquisar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnpesquisar.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpesquisar.ForeColor = System.Drawing.Color.White;
+            this.btnpesquisar.Location = new System.Drawing.Point(572, 15);
+            this.btnpesquisar.Name = "btnpesquisar";
+            this.btnpesquisar.Size = new System.Drawing.Size(130, 41);
+            this.btnpesquisar.TabIndex = 6;
+            this.btnpesquisar.Text = "Pesquisar";
+            this.btnpesquisar.UseVisualStyleBackColor = false;
+            // 
+            // txtpesquisa
+            // 
+            this.txtpesquisa.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtpesquisa.Location = new System.Drawing.Point(90, 26);
+            this.txtpesquisa.Name = "txtpesquisa";
+            this.txtpesquisa.Size = new System.Drawing.Size(392, 26);
+            this.txtpesquisa.TabIndex = 7;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label16.Location = new System.Drawing.Point(33, 32);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 20);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Nome";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
             // btnnovo
             // 
             this.btnnovo.BackColor = System.Drawing.SystemColors.Highlight;
@@ -517,49 +560,6 @@
             this.btnsalvar.UseVisualStyleBackColor = false;
             this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
-            // txtpesquisa
-            // 
-            this.txtpesquisa.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtpesquisa.Location = new System.Drawing.Point(90, 26);
-            this.txtpesquisa.Name = "txtpesquisa";
-            this.txtpesquisa.Size = new System.Drawing.Size(392, 26);
-            this.txtpesquisa.TabIndex = 7;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label16.Location = new System.Drawing.Point(33, 32);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 20);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Nome";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // btnpesquisar
-            // 
-            this.btnpesquisar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnpesquisar.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpesquisar.ForeColor = System.Drawing.Color.White;
-            this.btnpesquisar.Location = new System.Drawing.Point(572, 15);
-            this.btnpesquisar.Name = "btnpesquisar";
-            this.btnpesquisar.Size = new System.Drawing.Size(130, 41);
-            this.btnpesquisar.TabIndex = 6;
-            this.btnpesquisar.Text = "Pesquisar";
-            this.btnpesquisar.UseVisualStyleBackColor = false;
-            // 
-            // tabelaCliente
-            // 
-            this.tabelaCliente.AllowUserToAddRows = false;
-            this.tabelaCliente.AllowUserToDeleteRows = false;
-            this.tabelaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelaCliente.Location = new System.Drawing.Point(32, 62);
-            this.tabelaCliente.Name = "tabelaCliente";
-            this.tabelaCliente.ReadOnly = true;
-            this.tabelaCliente.Size = new System.Drawing.Size(980, 371);
-            this.tabelaCliente.TabIndex = 8;
-            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -574,6 +574,7 @@
             this.Name = "FrmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de clientes";
+            this.Load += new System.EventHandler(this.FrmClientes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabClientes.ResumeLayout(false);
