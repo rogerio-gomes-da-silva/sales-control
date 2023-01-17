@@ -478,6 +478,7 @@
             this.tabelaCliente.ReadOnly = true;
             this.tabelaCliente.Size = new System.Drawing.Size(980, 371);
             this.tabelaCliente.TabIndex = 8;
+            this.tabelaCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaCliente_CellClick);
             // 
             // btnpesquisar
             // 
@@ -534,6 +535,7 @@
             this.btneditar.TabIndex = 3;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnexcluir
             // 
@@ -546,6 +548,7 @@
             this.btnexcluir.TabIndex = 4;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = false;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
             // btnsalvar
             // 
