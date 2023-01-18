@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabClientes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnpesquisacep = new System.Windows.Forms.Button();
             this.cbuf = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtcidade = new System.Windows.Forms.TextBox();
@@ -111,6 +112,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnpesquisacep);
             this.tabPage1.Controls.Add(this.cbuf);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.txtcidade);
@@ -148,6 +150,19 @@
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnpesquisacep
+            // 
+            this.btnpesquisacep.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnpesquisacep.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpesquisacep.ForeColor = System.Drawing.Color.White;
+            this.btnpesquisacep.Location = new System.Drawing.Point(256, 214);
+            this.btnpesquisacep.Name = "btnpesquisacep";
+            this.btnpesquisacep.Size = new System.Drawing.Size(113, 41);
+            this.btnpesquisacep.TabIndex = 6;
+            this.btnpesquisacep.Text = "Pesquisa";
+            this.btnpesquisacep.UseVisualStyleBackColor = false;
+            this.btnpesquisacep.Click += new System.EventHandler(this.btnpesquisacep_Click);
+            // 
             // cbuf
             // 
             this.cbuf.FormattingEnabled = true;
@@ -179,7 +194,7 @@
             "SP",
             "SE",
             "TO"});
-            this.cbuf.Location = new System.Drawing.Point(840, 315);
+            this.cbuf.Location = new System.Drawing.Point(840, 362);
             this.cbuf.Name = "cbuf";
             this.cbuf.Size = new System.Drawing.Size(93, 26);
             this.cbuf.TabIndex = 29;
@@ -189,7 +204,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label15.Location = new System.Drawing.Point(811, 321);
+            this.label15.Location = new System.Drawing.Point(811, 368);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(31, 20);
             this.label15.TabIndex = 28;
@@ -198,7 +213,7 @@
             // txtcidade
             // 
             this.txtcidade.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtcidade.Location = new System.Drawing.Point(584, 315);
+            this.txtcidade.Location = new System.Drawing.Point(584, 362);
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(139, 26);
             this.txtcidade.TabIndex = 27;
@@ -208,7 +223,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label14.Location = new System.Drawing.Point(516, 322);
+            this.label14.Location = new System.Drawing.Point(516, 369);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(70, 20);
             this.label14.TabIndex = 26;
@@ -217,7 +232,7 @@
             // txtbairro
             // 
             this.txtbairro.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtbairro.Location = new System.Drawing.Point(105, 315);
+            this.txtbairro.Location = new System.Drawing.Point(105, 362);
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(265, 26);
             this.txtbairro.TabIndex = 25;
@@ -227,7 +242,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label13.Location = new System.Drawing.Point(45, 322);
+            this.label13.Location = new System.Drawing.Point(45, 369);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(62, 20);
             this.label13.TabIndex = 24;
@@ -236,7 +251,7 @@
             // txtcomplemento
             // 
             this.txtcomplemento.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtcomplemento.Location = new System.Drawing.Point(584, 246);
+            this.txtcomplemento.Location = new System.Drawing.Point(584, 293);
             this.txtcomplemento.Name = "txtcomplemento";
             this.txtcomplemento.Size = new System.Drawing.Size(139, 26);
             this.txtcomplemento.TabIndex = 23;
@@ -246,7 +261,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label12.Location = new System.Drawing.Point(454, 252);
+            this.label12.Location = new System.Drawing.Point(454, 299);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(132, 20);
             this.label12.TabIndex = 22;
@@ -255,7 +270,7 @@
             // txtnumero
             // 
             this.txtnumero.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtnumero.Location = new System.Drawing.Point(840, 246);
+            this.txtnumero.Location = new System.Drawing.Point(840, 293);
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(92, 26);
             this.txtnumero.TabIndex = 21;
@@ -265,7 +280,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label11.Location = new System.Drawing.Point(764, 253);
+            this.label11.Location = new System.Drawing.Point(764, 300);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 20);
             this.label11.TabIndex = 20;
@@ -274,7 +289,7 @@
             // txtendereco
             // 
             this.txtendereco.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtendereco.Location = new System.Drawing.Point(105, 246);
+            this.txtendereco.Location = new System.Drawing.Point(105, 293);
             this.txtendereco.Name = "txtendereco";
             this.txtendereco.Size = new System.Drawing.Size(265, 26);
             this.txtendereco.TabIndex = 19;
@@ -284,7 +299,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label10.Location = new System.Drawing.Point(18, 252);
+            this.label10.Location = new System.Drawing.Point(18, 299);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(91, 20);
             this.label10.TabIndex = 18;
@@ -293,7 +308,7 @@
             // txtcep
             // 
             this.txtcep.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtcep.Location = new System.Drawing.Point(105, 383);
+            this.txtcep.Location = new System.Drawing.Point(105, 223);
             this.txtcep.Mask = "00000-999";
             this.txtcep.Name = "txtcep";
             this.txtcep.Size = new System.Drawing.Size(139, 26);
@@ -304,7 +319,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label9.Location = new System.Drawing.Point(63, 389);
+            this.label9.Location = new System.Drawing.Point(63, 229);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 20);
             this.label9.TabIndex = 16;
@@ -491,6 +506,7 @@
             this.btnpesquisar.TabIndex = 6;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtpesquisa
             // 
@@ -499,6 +515,7 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(392, 26);
             this.txtpesquisa.TabIndex = 7;
+            this.txtpesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpesquisa_KeyPress);
             // 
             // label16
             // 
@@ -521,8 +538,9 @@
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(113, 41);
             this.btnnovo.TabIndex = 2;
-            this.btnnovo.Text = "Novo";
+            this.btnnovo.Text = "Limpar";
             this.btnnovo.UseVisualStyleBackColor = false;
+            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
             // 
             // btneditar
             // 
@@ -633,5 +651,6 @@
         private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.TextBox txtpesquisa;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnpesquisacep;
     }
 }

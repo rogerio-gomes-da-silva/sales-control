@@ -94,6 +94,7 @@
     <Compile Include="projetoConexao\ConnectionFactory.cs" />
     <Compile Include="projetoDao\ClienteDAO.cs" />
     <Compile Include="projetoModel\Cliente.cs" />
+    <Compile Include="projetoModel\Helpers.cs" />
     <Compile Include="projetoView\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>

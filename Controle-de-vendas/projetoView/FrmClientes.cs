@@ -154,5 +154,59 @@ namespace Controle_de_vendas.projetoView
             
             tabelaCliente.DataSource = dao.listarClientes();
         }
+
+        private void btnpesquisar_Click(object sender, EventArgs e)
+        {
+
+            string nome = txtpesquisa.Text;
+
+            ClienteDAO dao = new ClienteDAO();
+
+            tabelaCliente.DataSource = dao.buscarCliente(nome);
+
+            if (tabelaCliente.Rows.Count == 0)
+            {
+                tabelaCliente.DataSource = dao.listarClientes();
+            }
+
+        }
+
+        private void txtpesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string nome = "%" + txtpesquisa.Text + "%";
+
+            ClienteDAO dao = new ClienteDAO();
+
+            tabelaCliente.DataSource = dao.listarClientesPorNome(nome);
+        }
+
+        private void btnpesquisacep_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cep = txtcep.Text;
+                string xml = "http://viacep.com.br/ws/"+cep+"/xml/";
+
+                DataSet dados = new DataSet();
+
+                dados.ReadXml(xml);
+
+                txtendereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
+                txtcomplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+                txtbairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
+                txtcidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
+                cbuf.Text = dados.Tables[0].Rows[0]["uf"].ToString();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cep não encontrado, por favor digite o endereço manualmente.");
+            }
+        }
+
+        private void btnnovo_Click(object sender, EventArgs e)
+        {
+            new Helpers().LimparTela(this);
+        }
     }
 }
