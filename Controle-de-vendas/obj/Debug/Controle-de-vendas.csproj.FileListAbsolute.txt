@@ -32,3 +32,4 @@ D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle-de-vendas.c
 D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle-de-vendas.csproj.CopyComplete
 D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle-de-vendas.exe
 D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle-de-vendas.pdb
+D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle_de_vendas.projetoView.FrmFuncionarios.resources

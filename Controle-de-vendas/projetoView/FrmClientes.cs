@@ -208,5 +208,15 @@ namespace Controle_de_vendas.projetoView
         {
             new Helpers().LimparTela(this);
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabelaCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

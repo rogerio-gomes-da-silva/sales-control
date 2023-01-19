@@ -93,7 +93,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="projetoConexao\ConnectionFactory.cs" />
     <Compile Include="projetoDao\ClienteDAO.cs" />
+    <Compile Include="projetoDao\FuncionarioDAO.cs" />
     <Compile Include="projetoModel\Cliente.cs" />
+    <Compile Include="projetoModel\Funcionario.cs" />
     <Compile Include="projetoModel\Helpers.cs" />
     <Compile Include="projetoView\FrmClientes.cs">
       <SubType>Form</SubType>
@@ -101,9 +103,18 @@
     <Compile Include="projetoView\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="projetoView\Frmfuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projetoView\Frmfuncionarios.Designer.cs">
+      <DependentUpon>Frmfuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="projetoView\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projetoView\Frmfuncionarios.resx">
+      <DependentUpon>Frmfuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
