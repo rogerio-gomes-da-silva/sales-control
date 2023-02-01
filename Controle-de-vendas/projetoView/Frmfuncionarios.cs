@@ -36,7 +36,7 @@ namespace Controle_de_vendas.projetoView
 
         private void btnnovo_Click(object sender, EventArgs e)
         {
-
+            new Helpers().LimparTela(this);
         }
 
         private void btneditar_Click(object sender, EventArgs e)
@@ -110,7 +110,26 @@ namespace Controle_de_vendas.projetoView
 
         private void btnpesquisacep_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string cep = txtcep.Text;
+                string xml = "http://viacep.com.br/ws/" + cep + "/xml/";
 
+                DataSet dados = new DataSet();
+
+                dados.ReadXml(xml);
+
+                txtendereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
+                txtcomplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+                txtbairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
+                txtcidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
+                cbuf.Text = dados.Tables[0].Rows[0]["uf"].ToString();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cep não encontrado, por favor digite o endereço manualmente.");
+            }
         }
 
         private void tabelaFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -145,6 +164,31 @@ namespace Controle_de_vendas.projetoView
             cbuf.Text = tabelaFuncionario.CurrentRow.Cells[16].Value.ToString();
 
             tabFuncionarios.SelectedTab = tabPage1;
+        }
+
+        private void btnpesquisar_Click(object sender, EventArgs e)
+        {
+            string nome = txtpesquisa.Text;
+            
+            FuncionarioDAO dao = new FuncionarioDAO();
+            tabelaFuncionario.DataSource = dao.buscaFuncionarioPorNome(nome);
+
+            if(tabelaFuncionario.Rows.Count == 0 || txtpesquisa.Text == string.Empty)
+            {
+                MessageBox.Show("Funcionário não encontrado");
+                tabelaFuncionario.DataSource = dao.listarFuncionarios();
+            }
+
+
+        }
+
+        private void txtpesquisa_TextChanged(object sender, EventArgs e)
+        {
+            string nome = "%" + txtpesquisa.Text + "%";
+
+            FuncionarioDAO dao = new FuncionarioDAO();
+            tabelaFuncionario.DataSource = dao.buscarPorAproximacao(nome);
+
         }
     }
 }

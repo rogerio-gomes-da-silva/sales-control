@@ -95,7 +95,7 @@ namespace Controle_de_vendas.projetoDao
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                MessageBox.Show("Funcionário alterado com sucesso!");
+                MessageBox.Show("Dados alterados com sucesso!");
                 conexao.Close();
             }
             
@@ -167,9 +167,69 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
+        #region ListarFuncionarioPorNome
 
+        public DataTable buscaFuncionarioPorNome(string nome)
+        {
+            try
+            {
+                DataTable tabelafuncionarios = new DataTable();
 
+                string sql = "select * from tb_funcionarios where nome = @nome";
 
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome", nome);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelafuncionarios);
+                conexao.Close();
+                return tabelafuncionarios;
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando Sql: " + erro);
+
+                return null;
+            }
+
+        }
+
+        #endregion
+
+        #region BuscaPorAproximacao
+
+        public DataTable buscarPorAproximacao(string nome)
+        {
+            try
+            {
+                DataTable tabelafuncionarios = new DataTable();
+
+                string sql = "select * from tb_funcionarios where nome like @nome";
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome", nome);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelafuncionarios);
+                conexao.Close();
+                return tabelafuncionarios;
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando Sql: " + erro);
+
+                return null;
+            }
+
+        }
+
+        #endregion
 
     }
 }

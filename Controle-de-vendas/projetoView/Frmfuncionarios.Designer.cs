@@ -96,7 +96,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -117,6 +117,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.cbnivel);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.cbcargo);
@@ -159,7 +160,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1042, 453);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
-            this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // cbnivel
@@ -584,6 +584,7 @@
             this.btnpesquisar.TabIndex = 6;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtpesquisa
             // 
@@ -592,6 +593,7 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(392, 26);
             this.txtpesquisa.TabIndex = 7;
+            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             // 
             // label16
             // 
@@ -633,13 +635,13 @@
             // btneditar
             // 
             this.btneditar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btneditar.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Location = new System.Drawing.Point(366, 591);
+            this.btneditar.Location = new System.Drawing.Point(351, 591);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(113, 41);
+            this.btneditar.Size = new System.Drawing.Size(151, 41);
             this.btneditar.TabIndex = 7;
-            this.btneditar.Text = "Editar";
+            this.btneditar.Text = "Salvar alterações";
             this.btneditar.UseVisualStyleBackColor = false;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
@@ -660,6 +662,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1094, 642);
             this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.btnexcluir);
