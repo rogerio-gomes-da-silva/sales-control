@@ -8,5 +8,6 @@ namespace Controle_de_vendas.projetoModel
 {
     public class Fornecedor : Cliente
     {
+        public string cnpj { get; set; }
     }
 }

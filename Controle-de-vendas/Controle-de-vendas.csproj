@@ -93,8 +93,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="projetoConexao\ConnectionFactory.cs" />
     <Compile Include="projetoDao\ClienteDAO.cs" />
+    <Compile Include="projetoDao\FornecedorDAO.cs" />
     <Compile Include="projetoDao\FuncionarioDAO.cs" />
     <Compile Include="projetoModel\Cliente.cs" />
+    <Compile Include="projetoModel\Fornecedor.cs" />
     <Compile Include="projetoModel\Funcionario.cs" />
     <Compile Include="projetoModel\Helpers.cs" />
     <Compile Include="projetoView\FrmClientes.cs">

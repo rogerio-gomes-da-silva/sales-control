@@ -51,7 +51,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txttelefone = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtrg = new System.Windows.Forms.MaskedTextBox();
+            this.txtcnpj = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -129,7 +129,7 @@
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.txttelefone);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.txtrg);
+            this.tabPage1.Controls.Add(this.txtcnpj);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.txtemail);
             this.tabPage1.Controls.Add(this.label4);
@@ -360,14 +360,14 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Telefone";
             // 
-            // txtrg
+            // txtcnpj
             // 
-            this.txtrg.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtrg.Location = new System.Drawing.Point(584, 75);
-            this.txtrg.Mask = "##,###,###/####-##";
-            this.txtrg.Name = "txtrg";
-            this.txtrg.Size = new System.Drawing.Size(139, 26);
-            this.txtrg.TabIndex = 9;
+            this.txtcnpj.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtcnpj.Location = new System.Drawing.Point(584, 75);
+            this.txtcnpj.Mask = "##,###,###/####-##";
+            this.txtcnpj.Name = "txtcnpj";
+            this.txtcnpj.Size = new System.Drawing.Size(154, 26);
+            this.txtcnpj.TabIndex = 9;
             // 
             // label5
             // 
@@ -505,6 +505,7 @@
             this.btnsalvar.TabIndex = 13;
             this.btnsalvar.Text = "Salvar";
             this.btnsalvar.UseVisualStyleBackColor = false;
+            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
             // btnexcluir
             // 
@@ -529,6 +530,7 @@
             this.btneditar.TabIndex = 11;
             this.btneditar.Text = "Salvar alterações";
             this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click_1);
             // 
             // btnnovo
             // 
@@ -593,7 +595,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox txttelefone;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox txtrg;
+        private System.Windows.Forms.MaskedTextBox txtcnpj;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label label4;

@@ -1,4 +1,5 @@
-﻿using Controle_de_vendas.projetoModel;
+﻿using Controle_de_vendas.projetoDao;
+using Controle_de_vendas.projetoModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,6 +61,32 @@ namespace Controle_de_vendas.projetoView
         private void btnnovo_Click_1(object sender, EventArgs e)
         {
             new Helpers().LimparTela(this);
+        }
+
+        private void btneditar_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
+            Fornecedor obj = new Fornecedor();
+
+            obj.nome = txtnome.Text;
+            obj.cnpj = txtcnpj.Text;
+            obj.email = txtemail.Text;
+            obj.telefone = txttelefone.Text;
+            obj.celular = txtcelular.Text;
+            obj.cep = txtcep.Text;
+            obj.endereco = txtendereco.Text;
+            obj.numero = int.Parse(txtnumero.Text);
+            obj.complemento = txtcomplemento.Text;
+            obj.bairro = txtbairro.Text;
+            obj.cidade = txtcidade.Text;
+            obj.uf = cbuf.Text;
+
+            FornecedorDAO dao = new FornecedorDAO();
+            dao.cadastrarFornecedor(obj);
+
         }
     }
 }
