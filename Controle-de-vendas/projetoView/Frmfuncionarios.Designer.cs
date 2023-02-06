@@ -452,7 +452,7 @@
             // 
             this.txtcpf.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtcpf.Location = new System.Drawing.Point(840, 75);
-            this.txtcpf.Mask = "###.###.###-##";
+            this.txtcpf.Mask = "###,###,###-##";
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(139, 26);
             this.txtcpf.TabIndex = 11;
@@ -472,7 +472,7 @@
             // 
             this.txtrg.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtrg.Location = new System.Drawing.Point(584, 75);
-            this.txtrg.Mask = "##.###.###-##";
+            this.txtrg.Mask = "##,###,###-##";
             this.txtrg.Name = "txtrg";
             this.txtrg.Size = new System.Drawing.Size(139, 26);
             this.txtrg.TabIndex = 9;

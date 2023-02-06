@@ -1,6 +1,6 @@
 ﻿namespace Controle_de_vendas.projetoView
 {
-    partial class FrmClientes
+    partial class FrmFornecedor
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabClientes = new System.Windows.Forms.TabControl();
+            this.tabFornecedor = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnpesquisacep = new System.Windows.Forms.Button();
             this.cbuf = new System.Windows.Forms.ComboBox();
@@ -51,8 +51,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txttelefone = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtcpf = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtrg = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
@@ -62,30 +60,30 @@
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabelaCliente = new System.Windows.Forms.DataGridView();
+            this.tabelaFornecedor = new System.Windows.Forms.DataGridView();
             this.btnpesquisar = new System.Windows.Forms.Button();
             this.txtpesquisa = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnnovo = new System.Windows.Forms.Button();
-            this.btneditar = new System.Windows.Forms.Button();
-            this.btnexcluir = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
+            this.btnexcluir = new System.Windows.Forms.Button();
+            this.btneditar = new System.Windows.Forms.Button();
+            this.btnnovo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.tabClientes.SuspendLayout();
+            this.tabFornecedor.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaFornecedor)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel1.BackColor = System.Drawing.Color.OliveDrab;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1098, 74);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(1096, 74);
+            this.panel1.TabIndex = 2;
             // 
             // label1
             // 
@@ -94,24 +92,24 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(24, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 34);
+            this.label1.Size = new System.Drawing.Size(356, 34);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de cliente";
+            this.label1.Text = "Cadastro de fornecedores";
             // 
-            // tabClientes
+            // tabFornecedor
             // 
-            this.tabClientes.Controls.Add(this.tabPage1);
-            this.tabClientes.Controls.Add(this.tabPage2);
-            this.tabClientes.Location = new System.Drawing.Point(26, 90);
-            this.tabClientes.Name = "tabClientes";
-            this.tabClientes.SelectedIndex = 0;
-            this.tabClientes.Size = new System.Drawing.Size(1050, 479);
-            this.tabClientes.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabClientes.TabIndex = 1;
-            this.tabClientes.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabFornecedor.Controls.Add(this.tabPage1);
+            this.tabFornecedor.Controls.Add(this.tabPage2);
+            this.tabFornecedor.Location = new System.Drawing.Point(24, 90);
+            this.tabFornecedor.Name = "tabFornecedor";
+            this.tabFornecedor.SelectedIndex = 0;
+            this.tabFornecedor.Size = new System.Drawing.Size(1050, 479);
+            this.tabFornecedor.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabFornecedor.TabIndex = 3;
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.btnpesquisacep);
             this.tabPage1.Controls.Add(this.cbuf);
             this.tabPage1.Controls.Add(this.label15);
@@ -131,8 +129,6 @@
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.txttelefone);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.txtcpf);
-            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.txtrg);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.txtemail);
@@ -148,8 +144,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1042, 453);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btnpesquisacep
             // 
@@ -365,33 +359,12 @@
             this.label7.Size = new System.Drawing.Size(88, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "Telefone";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtcpf.Location = new System.Drawing.Point(840, 75);
-            this.txtcpf.Mask = "###,###,###-##";
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(139, 26);
-            this.txtcpf.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(801, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "CPF";
             // 
             // txtrg
             // 
             this.txtrg.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtrg.Location = new System.Drawing.Point(584, 75);
-            this.txtrg.Mask = "##,###,###-##";
+            this.txtrg.Mask = "##,###,###/####-##";
             this.txtrg.Name = "txtrg";
             this.txtrg.Size = new System.Drawing.Size(139, 26);
             this.txtrg.TabIndex = 9;
@@ -401,12 +374,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(554, 82);
+            this.label5.Location = new System.Drawing.Point(538, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 20);
+            this.label5.Size = new System.Drawing.Size(49, 20);
             this.label5.TabIndex = 8;
-            this.label5.Text = "RG";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Text = "Cnpj";
             // 
             // txtemail
             // 
@@ -434,7 +406,6 @@
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(362, 26);
             this.txtnome.TabIndex = 5;
-            this.txtnome.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -446,7 +417,6 @@
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nome";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtcodigo
             // 
@@ -466,11 +436,10 @@
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Código";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.tabelaCliente);
+            this.tabPage2.Controls.Add(this.tabelaFornecedor);
             this.tabPage2.Controls.Add(this.btnpesquisar);
             this.tabPage2.Controls.Add(this.txtpesquisa);
             this.tabPage2.Controls.Add(this.label16);
@@ -482,20 +451,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // tabelaCliente
+            // tabelaFornecedor
             // 
-            this.tabelaCliente.AllowUserToAddRows = false;
-            this.tabelaCliente.AllowUserToDeleteRows = false;
-            this.tabelaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelaCliente.Location = new System.Drawing.Point(32, 62);
-            this.tabelaCliente.Name = "tabelaCliente";
-            this.tabelaCliente.ReadOnly = true;
-            this.tabelaCliente.Size = new System.Drawing.Size(980, 371);
-            this.tabelaCliente.TabIndex = 8;
-            this.tabelaCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaCliente_CellClick);
-            this.tabelaCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaCliente_CellContentClick);
+            this.tabelaFornecedor.AllowUserToAddRows = false;
+            this.tabelaFornecedor.AllowUserToDeleteRows = false;
+            this.tabelaFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelaFornecedor.Location = new System.Drawing.Point(32, 62);
+            this.tabelaFornecedor.Name = "tabelaFornecedor";
+            this.tabelaFornecedor.ReadOnly = true;
+            this.tabelaFornecedor.Size = new System.Drawing.Size(980, 371);
+            this.tabelaFornecedor.TabIndex = 8;
             // 
             // btnpesquisar
             // 
@@ -508,7 +474,6 @@
             this.btnpesquisar.TabIndex = 6;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
-            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtpesquisa
             // 
@@ -517,7 +482,6 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(392, 26);
             this.txtpesquisa.TabIndex = 7;
-            this.txtpesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpesquisa_KeyPress);
             // 
             // label16
             // 
@@ -529,83 +493,77 @@
             this.label16.Size = new System.Drawing.Size(60, 20);
             this.label16.TabIndex = 6;
             this.label16.Text = "Nome";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // btnnovo
-            // 
-            this.btnnovo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnnovo.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnovo.ForeColor = System.Drawing.Color.White;
-            this.btnnovo.Location = new System.Drawing.Point(180, 588);
-            this.btnnovo.Name = "btnnovo";
-            this.btnnovo.Size = new System.Drawing.Size(113, 41);
-            this.btnnovo.TabIndex = 2;
-            this.btnnovo.Text = "Limpar";
-            this.btnnovo.UseVisualStyleBackColor = false;
-            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
-            // 
-            // btneditar
-            // 
-            this.btneditar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btneditar.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Location = new System.Drawing.Point(362, 588);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(113, 41);
-            this.btneditar.TabIndex = 3;
-            this.btneditar.Text = "Editar";
-            this.btneditar.UseVisualStyleBackColor = false;
-            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
-            // 
-            // btnexcluir
-            // 
-            this.btnexcluir.BackColor = System.Drawing.Color.Red;
-            this.btnexcluir.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexcluir.ForeColor = System.Drawing.Color.White;
-            this.btnexcluir.Location = new System.Drawing.Point(738, 588);
-            this.btnexcluir.Name = "btnexcluir";
-            this.btnexcluir.Size = new System.Drawing.Size(113, 41);
-            this.btnexcluir.TabIndex = 4;
-            this.btnexcluir.Text = "Excluir";
-            this.btnexcluir.UseVisualStyleBackColor = false;
-            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
             // btnsalvar
             // 
             this.btnsalvar.BackColor = System.Drawing.Color.Green;
             this.btnsalvar.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalvar.ForeColor = System.Drawing.Color.White;
-            this.btnsalvar.Location = new System.Drawing.Point(549, 588);
+            this.btnsalvar.Location = new System.Drawing.Point(565, 585);
             this.btnsalvar.Name = "btnsalvar";
             this.btnsalvar.Size = new System.Drawing.Size(113, 41);
-            this.btnsalvar.TabIndex = 5;
+            this.btnsalvar.TabIndex = 13;
             this.btnsalvar.Text = "Salvar";
             this.btnsalvar.UseVisualStyleBackColor = false;
-            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
-            // FrmClientes
+            // btnexcluir
+            // 
+            this.btnexcluir.BackColor = System.Drawing.Color.Red;
+            this.btnexcluir.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnexcluir.ForeColor = System.Drawing.Color.White;
+            this.btnexcluir.Location = new System.Drawing.Point(754, 585);
+            this.btnexcluir.Name = "btnexcluir";
+            this.btnexcluir.Size = new System.Drawing.Size(113, 41);
+            this.btnexcluir.TabIndex = 12;
+            this.btnexcluir.Text = "Excluir";
+            this.btnexcluir.UseVisualStyleBackColor = false;
+            // 
+            // btneditar
+            // 
+            this.btneditar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btneditar.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.ForeColor = System.Drawing.Color.White;
+            this.btneditar.Location = new System.Drawing.Point(363, 585);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(151, 41);
+            this.btneditar.TabIndex = 11;
+            this.btneditar.Text = "Salvar alterações";
+            this.btneditar.UseVisualStyleBackColor = false;
+            // 
+            // btnnovo
+            // 
+            this.btnnovo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnnovo.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnovo.ForeColor = System.Drawing.Color.White;
+            this.btnnovo.Location = new System.Drawing.Point(196, 585);
+            this.btnnovo.Name = "btnnovo";
+            this.btnnovo.Size = new System.Drawing.Size(113, 41);
+            this.btnnovo.TabIndex = 10;
+            this.btnnovo.Text = "Limpar";
+            this.btnnovo.UseVisualStyleBackColor = false;
+            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click_1);
+            // 
+            // FrmFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 641);
+            this.ClientSize = new System.Drawing.Size(1096, 642);
             this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnnovo);
-            this.Controls.Add(this.tabClientes);
+            this.Controls.Add(this.tabFornecedor);
             this.Controls.Add(this.panel1);
-            this.Name = "FrmClientes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de clientes";
-            this.Load += new System.EventHandler(this.FrmClientes_Load);
+            this.Name = "FrmFornecedor";
+            this.Text = "Cadastro de fornecedores";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabClientes.ResumeLayout(false);
+            this.tabFornecedor.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaFornecedor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -614,29 +572,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabClientes;
+        private System.Windows.Forms.TabControl tabFornecedor;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtnome;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtcodigo;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtemail;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox txtcelular;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox txttelefone;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox txtcpf;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox txtrg;
-        private System.Windows.Forms.TextBox txtnumero;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtendereco;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MaskedTextBox txtcep;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnpesquisacep;
+        private System.Windows.Forms.ComboBox cbuf;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtcidade;
         private System.Windows.Forms.Label label14;
@@ -644,15 +583,32 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtcomplemento;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cbuf;
-        private System.Windows.Forms.Button btnnovo;
-        private System.Windows.Forms.Button btneditar;
-        private System.Windows.Forms.Button btnexcluir;
-        private System.Windows.Forms.Button btnsalvar;
-        private System.Windows.Forms.DataGridView tabelaCliente;
+        private System.Windows.Forms.TextBox txtnumero;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtendereco;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox txtcep;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox txtcelular;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MaskedTextBox txttelefone;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox txtrg;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtnome;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtcodigo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView tabelaFornecedor;
         private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.TextBox txtpesquisa;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnpesquisacep;
+        private System.Windows.Forms.Button btnsalvar;
+        private System.Windows.Forms.Button btnexcluir;
+        private System.Windows.Forms.Button btneditar;
+        private System.Windows.Forms.Button btnnovo;
     }
 }
