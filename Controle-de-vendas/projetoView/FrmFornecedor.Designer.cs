@@ -558,6 +558,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmFornecedor";
             this.Text = "Cadastro de fornecedores";
+            this.Load += new System.EventHandler(this.FrmFornecedor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabFornecedor.ResumeLayout(false);

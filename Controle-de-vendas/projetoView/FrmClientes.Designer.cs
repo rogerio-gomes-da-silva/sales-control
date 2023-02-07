@@ -547,13 +547,13 @@
             // btneditar
             // 
             this.btneditar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btneditar.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Location = new System.Drawing.Point(362, 588);
+            this.btneditar.Location = new System.Drawing.Point(346, 588);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(113, 41);
+            this.btneditar.Size = new System.Drawing.Size(151, 41);
             this.btneditar.TabIndex = 3;
-            this.btneditar.Text = "Editar";
+            this.btneditar.Text = "Salvar alterações";
             this.btneditar.UseVisualStyleBackColor = false;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 

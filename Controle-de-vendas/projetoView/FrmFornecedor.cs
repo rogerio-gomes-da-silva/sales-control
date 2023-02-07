@@ -87,6 +87,16 @@ namespace Controle_de_vendas.projetoView
             FornecedorDAO dao = new FornecedorDAO();
             dao.cadastrarFornecedor(obj);
 
+            tabelaFornecedor.DataSource = dao.listarFornecedores();
+
+        }
+
+        private void FrmFornecedor_Load(object sender, EventArgs e)
+        {
+            FornecedorDAO dao = new FornecedorDAO();
+
+            tabelaFornecedor.DataSource = dao.listarFornecedores();
+
         }
     }
 }

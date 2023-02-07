@@ -3,6 +3,7 @@ using Controle_de_vendas.projetoModel;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,38 @@ namespace Controle_de_vendas.projetoDao
                 MessageBox.Show("Erro ao cadastrar o fornecedor " + erro);
 
             }
+        }
+
+        #endregion
+
+        #region Listar fornecedores datagridview
+
+        public DataTable listarFornecedores()
+        {
+            try
+            {
+                DataTable tabelaFornecedor = new DataTable();
+
+                string sql = "select * from tb_fornecedores";
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaFornecedor);
+                conexao.Close();
+                return tabelaFornecedor;
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando Sql: " + erro);
+
+                return null;
+            }
+
         }
 
         #endregion
