@@ -462,6 +462,7 @@
             this.tabelaFornecedor.ReadOnly = true;
             this.tabelaFornecedor.Size = new System.Drawing.Size(980, 371);
             this.tabelaFornecedor.TabIndex = 8;
+            this.tabelaFornecedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFornecedor_CellClick);
             // 
             // btnpesquisar
             // 
@@ -474,6 +475,7 @@
             this.btnpesquisar.TabIndex = 6;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtpesquisa
             // 
@@ -482,6 +484,7 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(392, 26);
             this.txtpesquisa.TabIndex = 7;
+            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             // 
             // label16
             // 
@@ -518,6 +521,7 @@
             this.btnexcluir.TabIndex = 12;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = false;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click_1);
             // 
             // btneditar
             // 
