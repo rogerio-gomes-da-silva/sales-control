@@ -11,7 +11,7 @@ namespace Controle_de_vendas.projetoModel
         public int id { get; set; }
         public string descricao { get; set; }
         public decimal preco { get; set; }
-        public int qtdestoque { get; set; }
+        public int qtd_estoque { get; set; }
         public int for_id { get; set; }
     }
 }

@@ -21,7 +21,7 @@ namespace Controle_de_vendas.projetoDao
             this.conexao = new ConnectionFactory().getconnection();
         }
 
-        #region CadastrarFuncionario
+        #region Cadastrar Funcionario
 
         public void cadastrarFuncionario(Funcionario obj)
         {
@@ -65,7 +65,7 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
-        #region AlterarFuncionario
+        #region Alterar Funcionario
         public void alterarFuncionario(Funcionario obj)
         {
             try
@@ -108,7 +108,7 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
-        #region ExcluirFuncionario
+        #region Excluir Funcionario
 
         public void excluirFuncionario(Funcionario obj)
         {
@@ -136,7 +136,7 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
-        #region ListarFuncionarios
+        #region Listar Funcionarios
         public DataTable listarFuncionarios()
         {
             try
@@ -167,7 +167,7 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
-        #region ListarFuncionarioPorNome
+        #region Listar Funcionario Por Nome
 
         public DataTable buscaFuncionarioPorNome(string nome)
         {
@@ -199,7 +199,7 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
-        #region BuscaPorAproximacao
+        #region Busca Por Aproximacao
 
         public DataTable buscarPorAproximacao(string nome)
         {

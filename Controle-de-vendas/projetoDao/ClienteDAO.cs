@@ -20,7 +20,7 @@ namespace Controle_de_vendas.projetoDao
             this.conexao = new ConnectionFactory().getconnection();
         }
 
-        #region CadastrarCliente
+        #region Cadastrar Cliente
         public void cadastrarCliente(Cliente obj)
         {
             try
@@ -57,7 +57,7 @@ namespace Controle_de_vendas.projetoDao
         }
         #endregion
 
-        #region AlterarCliente
+        #region Alterar Cliente
 
         public void alterarCliente(Cliente obj)
         {
@@ -99,7 +99,7 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
-        #region ExcluirCliente
+        #region Excluir Cliente
 
         public void excluirCliente(Cliente obj)
         {
@@ -124,7 +124,7 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
-        #region ListarClientes
+        #region Listar Clientes
 
         public DataTable listarClientes()
         {
@@ -156,7 +156,7 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
-        #region BuscarCliente
+        #region Buscar Cliente
         public DataTable buscarCliente(string nome)
         {
             try
@@ -188,7 +188,7 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
-        #region ListarClientesPorNome
+        #region Listar Clientes Por Nome
         public DataTable listarClientesPorNome(string nome)
         {
             try

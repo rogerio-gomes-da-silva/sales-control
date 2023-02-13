@@ -1,4 +1,5 @@
 ﻿using Controle_de_vendas.projetoDao;
+using Controle_de_vendas.projetoModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,26 @@ namespace Controle_de_vendas.projetoView
 
             cbfornecedor.DisplayMember = "nome";
             cbfornecedor.ValueMember = "id";
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
+            Produto obj = new Produto();
+
+            obj.descricao = txtdesc.Text;
+            obj.preco = decimal.Parse(txtpreco.Text);
+            obj.qtd_estoque = int.Parse(txtquantidade.Text);
+            obj.for_id = int.Parse(cbfornecedor.SelectedValue.ToString());
+
+            ProdutoDAO dao = new ProdutoDAO();
+            dao.cadastrarProduto(obj);
+
+            new Helpers().LimparTela(this);
+        }
+
+        private void btnnovo_Click(object sender, EventArgs e)
+        {
+            new Helpers().LimparTela(this);
         }
     }
 }
