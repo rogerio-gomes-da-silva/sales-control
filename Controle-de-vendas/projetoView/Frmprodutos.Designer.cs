@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabClientes = new System.Windows.Forms.TabControl();
+            this.tabProdutos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cbfornecedor = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.btneditar = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.tabClientes.SuspendLayout();
+            this.tabProdutos.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaProdutos)).BeginInit();
@@ -79,16 +79,16 @@
             this.panel1.Size = new System.Drawing.Size(1098, 74);
             this.panel1.TabIndex = 1;
             // 
-            // tabClientes
+            // tabProdutos
             // 
-            this.tabClientes.Controls.Add(this.tabPage1);
-            this.tabClientes.Controls.Add(this.tabPage2);
-            this.tabClientes.Location = new System.Drawing.Point(26, 95);
-            this.tabClientes.Name = "tabClientes";
-            this.tabClientes.SelectedIndex = 0;
-            this.tabClientes.Size = new System.Drawing.Size(1050, 479);
-            this.tabClientes.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabClientes.TabIndex = 2;
+            this.tabProdutos.Controls.Add(this.tabPage1);
+            this.tabProdutos.Controls.Add(this.tabPage2);
+            this.tabProdutos.Location = new System.Drawing.Point(26, 95);
+            this.tabProdutos.Name = "tabProdutos";
+            this.tabProdutos.SelectedIndex = 0;
+            this.tabProdutos.Size = new System.Drawing.Size(1050, 479);
+            this.tabProdutos.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabProdutos.TabIndex = 2;
             // 
             // tabPage1
             // 
@@ -232,6 +232,7 @@
             this.tabelaProdutos.ReadOnly = true;
             this.tabelaProdutos.Size = new System.Drawing.Size(980, 371);
             this.tabelaProdutos.TabIndex = 8;
+            this.tabelaProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaProdutos_CellClick);
             // 
             // btnpesquisar
             // 
@@ -244,6 +245,7 @@
             this.btnpesquisar.TabIndex = 6;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtpesquisa
             // 
@@ -252,6 +254,7 @@
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(392, 26);
             this.txtpesquisa.TabIndex = 7;
+            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             // 
             // label16
             // 
@@ -288,6 +291,7 @@
             this.btnexcluir.TabIndex = 8;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = false;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
             // btneditar
             // 
@@ -300,6 +304,7 @@
             this.btneditar.TabIndex = 7;
             this.btneditar.Text = "Salvar alterações";
             this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnnovo
             // 
@@ -323,14 +328,14 @@
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnnovo);
-            this.Controls.Add(this.tabClientes);
+            this.Controls.Add(this.tabProdutos);
             this.Controls.Add(this.panel1);
             this.Name = "Frmprodutos";
             this.Text = "Cadastro de produtos";
             this.Load += new System.EventHandler(this.Frmprodutos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabClientes.ResumeLayout(false);
+            this.tabProdutos.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -344,7 +349,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl tabClientes;
+        private System.Windows.Forms.TabControl tabProdutos;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox txtquantidade;
         private System.Windows.Forms.Label label4;
