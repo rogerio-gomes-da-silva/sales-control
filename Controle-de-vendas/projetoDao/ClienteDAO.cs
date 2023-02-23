@@ -52,7 +52,7 @@ namespace Controle_de_vendas.projetoDao
             catch (Exception erro)
             {
                 MessageBox.Show("Erro ao cadastrar o cliente " + erro);
-               
+
             }
         }
         #endregion
@@ -93,7 +93,7 @@ namespace Controle_de_vendas.projetoDao
             catch (Exception erro)
             {
                 MessageBox.Show("Erro ao cadastrar o cliente " + erro);
-                
+
             }
         }
 
@@ -148,7 +148,7 @@ namespace Controle_de_vendas.projetoDao
             {
 
                 MessageBox.Show("Erro ao executar o comando Sql: " + erro);
-                
+
                 return null;
             }
 
@@ -216,6 +216,45 @@ namespace Controle_de_vendas.projetoDao
                 return null;
             }
 
+        }
+
+        #endregion
+
+        #region Retorna Cliente Por Cpf
+
+        public Cliente retornaClientePorCpf(string cpf)
+        {
+            try
+            {
+                Cliente obj = new Cliente();
+                string sql = @"select * from tb_clientes where cpf = @cpf";
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@cpf", cpf);
+
+                conexao.Open();
+
+                MySqlDataReader rs = executacmd.ExecuteReader();
+
+                if (rs.Read())
+                {
+                    obj.codigo = rs.GetInt32("id");
+                    obj.nome = rs.GetString("nome");
+                    return obj;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente não encontrado!");
+                    return null;
+                }
+
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o seguinte erro " + erro);
+                return null;
+            }
         }
 
         #endregion
