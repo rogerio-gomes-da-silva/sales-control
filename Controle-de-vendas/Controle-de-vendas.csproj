@@ -100,6 +100,7 @@
     <Compile Include="projetoModel\Fornecedor.cs" />
     <Compile Include="projetoModel\Funcionario.cs" />
     <Compile Include="projetoModel\Helpers.cs" />
+    <Compile Include="projetoModel\ItemVenda.cs" />
     <Compile Include="projetoModel\Produto.cs" />
     <Compile Include="projetoModel\Venda.cs" />
     <Compile Include="projetoView\FrmClientes.cs">
