@@ -50,7 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabelaProdutos = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txttotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnpagamento = new System.Windows.Forms.Button();
@@ -188,6 +188,7 @@
             this.btnremover.TabIndex = 19;
             this.btnremover.Text = "Remover item";
             this.btnremover.UseVisualStyleBackColor = false;
+            this.btnremover.Click += new System.EventHandler(this.btnremover_Click);
             // 
             // btnadd
             // 
@@ -200,6 +201,7 @@
             this.btnadd.TabIndex = 18;
             this.btnadd.Text = "Adicionar item";
             this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // txtpreco
             // 
@@ -284,15 +286,19 @@
             // 
             // tabelaProdutos
             // 
+            this.tabelaProdutos.AllowUserToAddRows = false;
+            this.tabelaProdutos.AllowUserToDeleteRows = false;
             this.tabelaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaProdutos.Location = new System.Drawing.Point(527, 86);
             this.tabelaProdutos.Name = "tabelaProdutos";
+            this.tabelaProdutos.ReadOnly = true;
             this.tabelaProdutos.Size = new System.Drawing.Size(559, 411);
             this.tabelaProdutos.TabIndex = 5;
+            this.tabelaProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaProdutos_CellContentClick);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txttotal);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Location = new System.Drawing.Point(596, 512);
             this.groupBox3.Name = "groupBox3";
@@ -300,14 +306,14 @@
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             // 
-            // textBox1
+            // txttotal
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(143, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 26);
-            this.textBox1.TabIndex = 7;
+            this.txttotal.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txttotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotal.Location = new System.Drawing.Point(143, 19);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(222, 26);
+            this.txttotal.TabIndex = 7;
             // 
             // label8
             // 
@@ -360,6 +366,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Frmvendas";
             this.Text = "Vendas";
+            this.Load += new System.EventHandler(this.Frmvendas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -397,7 +404,7 @@
         private System.Windows.Forms.Button btnpagamento;
         private System.Windows.Forms.DataGridView tabelaProdutos;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtdata;
         private System.Windows.Forms.Label label9;

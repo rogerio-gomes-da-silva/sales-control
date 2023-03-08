@@ -238,11 +238,14 @@ namespace Controle_de_vendas.projetoDao
                     p.descricao = rs.GetString("descricao");
                     p.preco = rs.GetDecimal("preco");
 
+                    conexao.Close();
                     return p;
                 }
                 else
                 {
                     MessageBox.Show("Nem um produto encontrado com esse código!");
+
+                    conexao.Close();
                     return null;
                 }
 
