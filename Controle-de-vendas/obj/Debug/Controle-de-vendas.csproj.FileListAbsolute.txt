@@ -36,3 +36,4 @@ D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle_de_vendas.p
 D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle_de_vendas.projetoView.FrmFornecedor.resources
 D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle_de_vendas.projetoView.Frmprodutos.resources
 D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle_de_vendas.projetoView.Frmvendas.resources
+D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle_de_vendas.projetoView.Frmpagamentos.resources

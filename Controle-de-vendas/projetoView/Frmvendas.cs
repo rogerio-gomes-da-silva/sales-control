@@ -52,6 +52,10 @@ namespace Controle_de_vendas.projetoView
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Frmpagamentos tela = new Frmpagamentos(cliente, carrinho);
+            tela.Show();
+            tela.txttotal.Text = total.ToString();
+
 
         }
 
@@ -82,23 +86,31 @@ namespace Controle_de_vendas.projetoView
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            qtd = int.Parse(txtquantidade.Text);
-            preco = decimal.Parse(txtpreco.Text);
+            try
+            {
+                qtd = int.Parse(txtquantidade.Text);
+                preco = decimal.Parse(txtpreco.Text);
 
-            subtotal = qtd * preco;
+                subtotal = qtd * preco;
 
-            total += subtotal;
+                total += subtotal;
 
-            carrinho.Rows.Add(int.Parse(txtcodigo.Text), txtdesc.Text, qtd, preco, subtotal);
+                carrinho.Rows.Add(int.Parse(txtcodigo.Text), txtdesc.Text, qtd, preco, subtotal);
 
-            txttotal.Text = total.ToString();
+                txttotal.Text = total.ToString();
 
-            txtcodigo.Clear();
-            txtdesc.Clear();
-            txtpreco.Clear();
-            txtquantidade.Clear();
+                txtcodigo.Clear();
+                txtdesc.Clear();
+                txtpreco.Clear();
+                txtquantidade.Clear();
 
-            txtcodigo.Focus();
+                txtcodigo.Focus();
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Digite o código do produto!");
+            }
 
         }
 
