@@ -49,5 +49,38 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
+        #region Metodo Que Retorna o Id da Ultima Venda
+
+        public int retornaIdDaUltimaVenda()
+        {
+            try
+            {
+                int idvenda = 0;
+
+                string sql = @"select max(id) id from tb_vendas";
+
+                MySqlCommand executacmdsql = new MySqlCommand(sql, conexao);
+                conexao.Open();
+                MySqlDataReader rs = executacmdsql.ExecuteReader();
+
+                if(rs.Read())
+                {
+                    idvenda = rs.GetInt32("id");
+                }
+
+                conexao.Close();
+                return idvenda;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o seguinte erro: " + erro);
+                conexao.Close();
+                return 0;
+            }
+        }
+
+        #endregion
+
     }
 }
