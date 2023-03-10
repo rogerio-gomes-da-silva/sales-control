@@ -15,12 +15,14 @@ namespace Controle_de_vendas.projetoView
     {
         Cliente cliente = new Cliente();
         DataTable carrinho = new DataTable();
+        DateTime dataatual;
 
-        public Frmpagamentos(Cliente cliente, DataTable carrinho)
+        public Frmpagamentos(Cliente cliente, DataTable carrinho, DateTime dataatual)
         {
             this.cliente = cliente;
             this.carrinho = carrinho;
             InitializeComponent();
+            this.dataatual = dataatual;
         }
 
         private void Frmpagamentos_Load(object sender, EventArgs e)
