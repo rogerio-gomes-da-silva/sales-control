@@ -1,4 +1,5 @@
-﻿using Controle_de_vendas.projetoModel;
+﻿using Controle_de_vendas.projetoDao;
+using Controle_de_vendas.projetoModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,49 @@ namespace Controle_de_vendas.projetoView
 
         private void Frmpagamentos_Load(object sender, EventArgs e)
         {
+            txttroco.Text = "0,00";
+            txtcartao.Text = "0,00";
+            txtdinheiro.Text = "0,00";
+        }
 
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            //Botão de finalizar a venda
+            try
+            {
+                decimal p_dinheiro, p_cartao, troco, totalvenda, total;
+
+                p_dinheiro = decimal.Parse(txtdinheiro.Text);
+                p_cartao = decimal.Parse(txtcartao.Text);
+                total = decimal.Parse(txttotal.Text);
+
+                totalvenda = p_dinheiro + p_cartao;
+
+                if(totalvenda <= total)
+                {
+                    MessageBox.Show("O total pago e menor que o valor total de venda ");
+                }
+                else
+                {
+                    troco = totalvenda - total;
+
+                    Venda vendas = new Venda();
+                    vendas.cliente_id = cliente.codigo;
+                    vendas.data_venda = dataatual;
+                    vendas.total_venda = total;
+                    vendas.observacoes = txtobservacao.Text;
+
+                    VendaDAO vdao = new VendaDAO();
+                     txttroco.Text = troco.ToString();
+                    vdao.cadastrarVendar(vendas);
+                }
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao finalizar venda! " + erro);
+            }
         }
     }
 }
