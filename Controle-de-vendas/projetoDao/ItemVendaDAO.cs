@@ -40,7 +40,7 @@ namespace Controle_de_vendas.projetoDao
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                MessageBox.Show("Item cadastrado com sucesso!");
+                //MessageBox.Show("Item cadastrado com sucesso!");
                 conexao.Close();
 
             }

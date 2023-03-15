@@ -46,7 +46,7 @@ namespace Controle_de_vendas.projetoView
 
                 totalvenda = p_dinheiro + p_cartao;
 
-                if(totalvenda <= total)
+                if(totalvenda < total)
                 {
                     MessageBox.Show("O total pago e menor que o valor total de venda ");
                 }
@@ -63,6 +63,21 @@ namespace Controle_de_vendas.projetoView
                     VendaDAO vdao = new VendaDAO();
                      txttroco.Text = troco.ToString();
                     vdao.cadastrarVendar(vendas);
+
+                    foreach(DataRow linha in carrinho.Rows)
+                    {
+                        ItemVenda item = new ItemVenda();
+                        item.venda_id = vdao.retornaIdDaUltimaVenda();
+                        item.produto_id = int.Parse(linha["Código"].ToString());
+                        item.qtd = int.Parse(linha["Quantidade"].ToString());
+                        item.subtotal = decimal.Parse(linha["Subtotal"].ToString());
+
+                        ItemVendaDAO itemdao = new ItemVendaDAO();
+                        itemdao.cadastrarItem(item);
+                    }
+                    MessageBox.Show("Venda finalizada com sucesso!");
+                    this.Dispose();
+                    new Frmvendas().ShowDialog();
                 }
 
             }

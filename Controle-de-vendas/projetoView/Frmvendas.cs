@@ -65,8 +65,16 @@ namespace Controle_de_vendas.projetoView
             if (e.KeyChar == 13)
             {
                 cliente = cdao.retornaClientePorCpf(txtcpf.Text);
-                txtnome.Text = cliente.nome;
 
+                if (cliente != null)
+                {
+                    txtnome.Text = cliente.nome;
+                }
+                else
+                {
+                    txtcpf.Clear();
+                    txtcpf.Focus();
+                }
             }
         }
 
@@ -75,8 +83,19 @@ namespace Controle_de_vendas.projetoView
             if (e.KeyChar == 13)
             {
                 produto = pdao.retornaProdutoPorCodigo(int.Parse(txtcodigo.Text));
-                txtdesc.Text = produto.descricao;
-                txtpreco.Text = produto.preco.ToString();
+
+                if (produto != null)
+                {
+                    txtdesc.Text = produto.descricao;
+                    txtpreco.Text = produto.preco.ToString();
+                }
+                else
+                {
+                    txtcodigo.Clear();
+                    txtcodigo.Focus();
+                }
+
+                
             }
         }
 
