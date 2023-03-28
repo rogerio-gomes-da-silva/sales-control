@@ -111,6 +111,12 @@
     <Compile Include="projetoView\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="projetoView\Frmdetalhes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projetoView\Frmdetalhes.Designer.cs">
+      <DependentUpon>Frmdetalhes.cs</DependentUpon>
+    </Compile>
     <Compile Include="projetoView\FrmFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="projetoView\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projetoView\Frmdetalhes.resx">
+      <DependentUpon>Frmdetalhes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projetoView\FrmFornecedor.resx">
       <DependentUpon>FrmFornecedor.cs</DependentUpon>

@@ -89,7 +89,7 @@
             this.btnpesquisarpordata.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpesquisarpordata.ForeColor = System.Drawing.Color.White;
             this.btnpesquisarpordata.Image = ((System.Drawing.Image)(resources.GetObject("btnpesquisarpordata.Image")));
-            this.btnpesquisarpordata.Location = new System.Drawing.Point(645, 19);
+            this.btnpesquisarpordata.Location = new System.Drawing.Point(645, 13);
             this.btnpesquisarpordata.Name = "btnpesquisarpordata";
             this.btnpesquisarpordata.Size = new System.Drawing.Size(80, 50);
             this.btnpesquisarpordata.TabIndex = 27;
