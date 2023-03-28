@@ -26,5 +26,21 @@ namespace Controle_de_vendas.projetoView
         {
 
         }
+
+        private void dgvdetalhes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Frmdetalhes view = new Frmdetalhes();
+
+            DateTime datavenda = Convert.ToDateTime(dgvdetalhes.CurrentRow.Cells[1].Value.ToString());
+
+            view.txtcliente.Text = dgvdetalhes.CurrentRow.Cells[2].Value.ToString();
+            view.txttotal.Text = dgvdetalhes.CurrentRow.Cells[3].Value.ToString();
+            view.txtobs.Text = dgvdetalhes.CurrentRow.Cells[4].Value.ToString();
+            view.txtdata.Text = datavenda.ToString("dd/MM/yyyy");
+
+            view.ShowDialog();
+
+
+        }
     }
 }

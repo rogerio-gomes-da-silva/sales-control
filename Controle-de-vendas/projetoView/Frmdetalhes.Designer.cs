@@ -176,6 +176,7 @@
             this.dgvdetalhes.ReadOnly = true;
             this.dgvdetalhes.Size = new System.Drawing.Size(741, 250);
             this.dgvdetalhes.TabIndex = 7;
+            this.dgvdetalhes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdetalhes_CellClick);
             // 
             // Frmdetalhes
             // 
@@ -202,13 +203,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtcliente;
-        private System.Windows.Forms.TextBox txtobs;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtdata;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvdetalhes;
+        public System.Windows.Forms.TextBox txtcliente;
+        public System.Windows.Forms.TextBox txtobs;
+        public System.Windows.Forms.TextBox txttotal;
+        public System.Windows.Forms.TextBox txtdata;
     }
 }
