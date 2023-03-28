@@ -94,6 +94,7 @@
             this.btnpesquisarpordata.Size = new System.Drawing.Size(80, 50);
             this.btnpesquisarpordata.TabIndex = 27;
             this.btnpesquisarpordata.UseVisualStyleBackColor = false;
+            this.btnpesquisarpordata.Click += new System.EventHandler(this.btnpesquisarpordata_Click);
             // 
             // dtFim
             // 
