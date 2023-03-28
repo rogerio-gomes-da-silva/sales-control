@@ -3,6 +3,7 @@ using Controle_de_vendas.projetoModel;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,6 +78,43 @@ namespace Controle_de_vendas.projetoDao
                 MessageBox.Show("Aconteceu o seguinte erro: " + erro);
                 conexao.Close();
                 return 0;
+            }
+        }
+
+        #endregion
+
+        #region Exibir Historico de Venda
+
+        public DataTable listarVendasPorPeriodo(DateTime datainicio, DateTime datafim)
+        {
+            try
+            {
+                DataTable tabelaHistorico = new DataTable();
+
+                string sql = @"select v.id as 'Código',
+                                v.data_venda   as 'Data da venda',
+                                c.nome         as 'Cliente'
+                                v.total_venda  as 'Total',
+                                v.observacoes  as 'Obs'
+                            FROM tb_vendas as v join tb_cliente as c on (v.cliente_id = c.id)
+                            WHERE v.data_venda between @datainicio and @datafim";
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@datainicio", datainicio);
+                executacmd.Parameters.AddWithValue("@datafim", datafim);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                MySqlDataAdapter data = new MySqlDataAdapter(executacmd);
+                data.Fill(tabelaHistorico);
+                return tabelaHistorico;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar comando sql" + erro);
+                return null;
             }
         }
 
