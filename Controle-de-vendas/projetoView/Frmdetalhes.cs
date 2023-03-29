@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controle_de_vendas.projetoDao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace Controle_de_vendas.projetoView
 {
     public partial class Frmdetalhes : Form
     {
+        
         public Frmdetalhes()
         {
+            
             InitializeComponent();
         }
 
@@ -41,6 +44,11 @@ namespace Controle_de_vendas.projetoView
             view.ShowDialog();
 
 
+        }
+
+        private void Frmdetalhes_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

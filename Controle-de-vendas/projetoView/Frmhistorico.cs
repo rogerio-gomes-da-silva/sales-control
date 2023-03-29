@@ -29,5 +29,10 @@ namespace Controle_de_vendas.projetoView
             tabelaHistorico.DataSource = dao.listarVendasPorPeriodo(datainicio, datafim);
 
         }
+
+        private void Frmhistorico_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

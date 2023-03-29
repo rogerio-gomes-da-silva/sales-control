@@ -3,6 +3,7 @@ using Controle_de_vendas.projetoModel;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,42 @@ namespace Controle_de_vendas.projetoDao
             {
 
                 MessageBox.Show("Erro:  " + erro);
+            }
+        }
+
+        #endregion
+
+        #region Lista Todos os Itens Por Venda
+
+        public DataTable ListarItensPorVenda(int venda_id)
+        {
+            try
+            {
+                DataTable tabelaItens = new DataTable();
+
+                string sql = @"select i.id as 'Código',
+                                p.descricao    as 'Descriçao',
+                                i.qtd          as 'Quantidade'
+                                p.preco        as 'Preço',
+                                i.subtotal     as 'Subtotal'
+                            FROM tb_itensvendas as i join tb_produtos as p on (i.produto_id = p.id)
+                            WHERE venda_id = @venda_id";
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@venda_id", venda_id);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                MySqlDataAdapter data = new MySqlDataAdapter(executacmd);
+                data.Fill(tabelaItens);
+                return tabelaItens;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar comando sql" + erro);
+                return null;
             }
         }
 
