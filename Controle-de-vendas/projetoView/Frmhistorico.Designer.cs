@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmhistorico));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -88,7 +87,7 @@
             this.btnpesquisarpordata.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnpesquisarpordata.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpesquisarpordata.ForeColor = System.Drawing.Color.White;
-            this.btnpesquisarpordata.Image = ((System.Drawing.Image)(resources.GetObject("btnpesquisarpordata.Image")));
+            this.btnpesquisarpordata.Image = global::Controle_de_vendas.Properties.Resources.pesquisapng;
             this.btnpesquisarpordata.Location = new System.Drawing.Point(645, 13);
             this.btnpesquisarpordata.Name = "btnpesquisarpordata";
             this.btnpesquisarpordata.Size = new System.Drawing.Size(80, 50);

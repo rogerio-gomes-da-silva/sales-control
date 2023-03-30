@@ -17,7 +17,7 @@ namespace Controle_de_vendas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frmlogin());
+            Application.Run(new Frmmenu());
         }
     }
 }
