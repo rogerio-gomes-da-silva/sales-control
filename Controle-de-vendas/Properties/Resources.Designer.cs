@@ -113,6 +113,16 @@ namespace Controle_de_vendas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap planodefundo {
+            get {
+                object obj = ResourceManager.GetObject("planodefundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap produto {
             get {
                 object obj = ResourceManager.GetObject("produto", resourceCulture);
