@@ -27,8 +27,7 @@ namespace Controle_de_vendas.projetoView
 
            if (dao.EfetuarLogin(email, senha))
             {
-                Frmmenu telamenu = new Frmmenu();
-                telamenu.Show();
+                
                 this.Hide();
             }
         }

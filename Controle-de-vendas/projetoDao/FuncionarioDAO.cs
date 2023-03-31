@@ -1,5 +1,6 @@
 ﻿using Controle_de_vendas.projetoConexao;
 using Controle_de_vendas.projetoModel;
+using Controle_de_vendas.projetoView;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -250,7 +251,26 @@ namespace Controle_de_vendas.projetoDao
 
                 if(reader.Read())
                 {
-                    MessageBox.Show("Logado com sucesso!");
+                    string nivel = reader.GetString("nivel_acesso");
+                    string nome = reader.GetString("nome");
+
+                    MessageBox.Show("Seja bem vindo " + nome);
+                    Frmmenu telamenu = new Frmmenu();
+
+                    if (nivel.Equals("Administrador"))
+                    {
+                        telamenu.Show();
+                    }
+                    else if (nivel.Equals("Usuário"))
+                    {
+                        telamenu.menuProdutos.Visible = false;
+                        telamenu.tsmHistoricoVendas.Visible = false;
+                        telamenu.menuFuncionario.Visible = false;
+                        telamenu.menuFornecedor.Visible = false;
+                        telamenu.Show();
+                    }
+
+                    
                     return true;
                 }
                 else

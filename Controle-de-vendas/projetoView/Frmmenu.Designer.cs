@@ -297,18 +297,14 @@
         private System.Windows.Forms.ToolStripMenuItem menuCliente;
         private System.Windows.Forms.ToolStripMenuItem tsmCadastroCliente;
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaCliente;
-        private System.Windows.Forms.ToolStripMenuItem menuFuncionario;
         private System.Windows.Forms.ToolStripMenuItem tsmCadastroFuncionario;
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaFuncionario;
-        private System.Windows.Forms.ToolStripMenuItem menuFornecedor;
         private System.Windows.Forms.ToolStripMenuItem tsmCadastroFornecedor;
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaFornecedor;
-        private System.Windows.Forms.ToolStripMenuItem menuProdutos;
         private System.Windows.Forms.ToolStripMenuItem tsmCadastroProduto;
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaProduto;
         private System.Windows.Forms.ToolStripMenuItem menuVenda;
         private System.Windows.Forms.ToolStripMenuItem tsmNovaVenda;
-        private System.Windows.Forms.ToolStripMenuItem tsmHistoricoVendas;
         private System.Windows.Forms.ToolStripMenuItem menuConfiguracao;
         private System.Windows.Forms.ToolStripMenuItem tsmTrocarUsuario;
         private System.Windows.Forms.ToolStripMenuItem tsmSair;
@@ -319,5 +315,9 @@
         private System.Windows.Forms.ToolStripStatusLabel txthora;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.ToolStripStatusLabel txtusuario;
+        public System.Windows.Forms.ToolStripMenuItem menuProdutos;
+        public System.Windows.Forms.ToolStripMenuItem tsmHistoricoVendas;
+        public System.Windows.Forms.ToolStripMenuItem menuFuncionario;
+        public System.Windows.Forms.ToolStripMenuItem menuFornecedor;
     }
 }
