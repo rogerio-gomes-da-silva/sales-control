@@ -110,6 +110,7 @@
             this.btnlogar.TabIndex = 28;
             this.btnlogar.Text = "Entrar";
             this.btnlogar.UseVisualStyleBackColor = false;
+            this.btnlogar.Click += new System.EventHandler(this.btnlogar_Click);
             // 
             // Frmlogin
             // 

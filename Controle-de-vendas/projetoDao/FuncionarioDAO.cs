@@ -231,5 +231,43 @@ namespace Controle_de_vendas.projetoDao
 
         #endregion
 
+        #region Metodo Login
+
+        public bool EfetuarLogin(string email, string senha)
+        {
+            try
+            {
+                string sql = @"select * from tb_funcionarios where email = @email and senha = @senha";
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@email", email);
+                executacmd.Parameters.AddWithValue("@senha", senha);
+
+                conexao.Open();
+
+                MySqlDataReader reader = executacmd.ExecuteReader();
+
+                if(reader.Read())
+                {
+                    MessageBox.Show("Logado com sucesso!");
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("E-mail ou senha incorreto!");
+                    return false;
+                }
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Ops aconteceu o erro: " + erro);
+                return false;
+            }
+        }
+
+        #endregion
+
     }
 }
