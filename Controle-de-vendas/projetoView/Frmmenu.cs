@@ -19,7 +19,10 @@ namespace Controle_de_vendas.projetoView
 
         private void trocarDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Frmlogin novoLogin = new Frmlogin();
 
+            Close();
+            novoLogin.Show();
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
@@ -104,7 +107,13 @@ namespace Controle_de_vendas.projetoView
 
         private void tsmSair_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult mensagem = MessageBox.Show("Você deseja realmente sair?", "ATENÇÃO!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (mensagem == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
         }
     }
 }
