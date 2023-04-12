@@ -20,9 +20,13 @@ namespace Controle_de_vendas.projetoView
         private void trocarDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frmlogin novoLogin = new Frmlogin();
+            DialogResult mensagem = MessageBox.Show("Você deseja realmente trocar de usuário?", "ATENÇÃO!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            Close();
-            novoLogin.Show();
+            if (mensagem == DialogResult.Yes)
+            {
+                Close();
+                novoLogin.Show();
+            }
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
