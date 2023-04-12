@@ -26,5 +26,15 @@ namespace Controle_de_vendas.projetoView
         {
 
         }
+
+        private void Frmmenu_Load(object sender, EventArgs e)
+        {
+            txtdata.Text = DateTime.Now.ToShortDateString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txthora.Text = DateTime.Now.ToShortTimeString();
+        }
     }
 }

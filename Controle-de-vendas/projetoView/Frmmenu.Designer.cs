@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmCadastroCliente = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +55,7 @@
             this.txthora = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtusuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -271,6 +273,11 @@
             this.txtusuario.Size = new System.Drawing.Size(76, 21);
             this.txtusuario.Text = "usuario1";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Frmmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,6 +290,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Frmmenu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Frmmenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -314,10 +322,11 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel txthora;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
-        private System.Windows.Forms.ToolStripStatusLabel txtusuario;
         public System.Windows.Forms.ToolStripMenuItem menuProdutos;
         public System.Windows.Forms.ToolStripMenuItem tsmHistoricoVendas;
         public System.Windows.Forms.ToolStripMenuItem menuFuncionario;
         public System.Windows.Forms.ToolStripMenuItem menuFornecedor;
+        public System.Windows.Forms.ToolStripStatusLabel txtusuario;
+        private System.Windows.Forms.Timer timer1;
     }
 }

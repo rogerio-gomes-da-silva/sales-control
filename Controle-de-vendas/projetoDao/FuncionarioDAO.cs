@@ -257,6 +257,8 @@ namespace Controle_de_vendas.projetoDao
                     MessageBox.Show("Seja bem vindo " + nome);
                     Frmmenu telamenu = new Frmmenu();
 
+                    telamenu.txtusuario.Text = nome;
+
                     if (nivel.Equals("Administrador"))
                     {
                         telamenu.Show();
