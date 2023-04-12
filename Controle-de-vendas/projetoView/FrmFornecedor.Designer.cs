@@ -579,7 +579,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabFornecedor;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnpesquisacep;
         private System.Windows.Forms.ComboBox cbuf;
@@ -608,7 +607,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView tabelaFornecedor;
         private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.TextBox txtpesquisa;
@@ -617,5 +615,7 @@
         private System.Windows.Forms.Button btnexcluir;
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btnnovo;
+        public System.Windows.Forms.TabControl tabFornecedor;
+        public System.Windows.Forms.TabPage tabPage2;
     }
 }

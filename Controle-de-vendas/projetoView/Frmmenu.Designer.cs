@@ -92,12 +92,14 @@
             this.tsmCadastroCliente.Name = "tsmCadastroCliente";
             this.tsmCadastroCliente.Size = new System.Drawing.Size(254, 30);
             this.tsmCadastroCliente.Text = "Cadastro de clientes";
+            this.tsmCadastroCliente.Click += new System.EventHandler(this.tsmCadastroCliente_Click);
             // 
             // tsmConsultaCliente
             // 
             this.tsmConsultaCliente.Name = "tsmConsultaCliente";
             this.tsmConsultaCliente.Size = new System.Drawing.Size(254, 30);
             this.tsmConsultaCliente.Text = "Consulta de clientes";
+            this.tsmConsultaCliente.Click += new System.EventHandler(this.tsmConsultaCliente_Click);
             // 
             // menuFuncionario
             // 
@@ -115,12 +117,14 @@
             this.tsmCadastroFuncionario.Name = "tsmCadastroFuncionario";
             this.tsmCadastroFuncionario.Size = new System.Drawing.Size(295, 30);
             this.tsmCadastroFuncionario.Text = "Cadastro de funcionários";
+            this.tsmCadastroFuncionario.Click += new System.EventHandler(this.tsmCadastroFuncionario_Click);
             // 
             // tsmConsultaFuncionario
             // 
             this.tsmConsultaFuncionario.Name = "tsmConsultaFuncionario";
             this.tsmConsultaFuncionario.Size = new System.Drawing.Size(295, 30);
             this.tsmConsultaFuncionario.Text = "Consulta de funcionários";
+            this.tsmConsultaFuncionario.Click += new System.EventHandler(this.tsmConsultaFuncionario_Click);
             // 
             // menuFornecedor
             // 
@@ -138,12 +142,14 @@
             this.tsmCadastroFornecedor.Name = "tsmCadastroFornecedor";
             this.tsmCadastroFornecedor.Size = new System.Drawing.Size(301, 30);
             this.tsmCadastroFornecedor.Text = "Cadastro de fornecedores";
+            this.tsmCadastroFornecedor.Click += new System.EventHandler(this.tsmCadastroFornecedor_Click);
             // 
             // tsmConsultaFornecedor
             // 
             this.tsmConsultaFornecedor.Name = "tsmConsultaFornecedor";
             this.tsmConsultaFornecedor.Size = new System.Drawing.Size(301, 30);
             this.tsmConsultaFornecedor.Text = "Consulta de fornecedores";
+            this.tsmConsultaFornecedor.Click += new System.EventHandler(this.tsmConsultaFornecedor_Click);
             // 
             // menuProdutos
             // 
@@ -161,12 +167,14 @@
             this.tsmCadastroProduto.Name = "tsmCadastroProduto";
             this.tsmCadastroProduto.Size = new System.Drawing.Size(266, 30);
             this.tsmCadastroProduto.Text = "Cadastro de produtos";
+            this.tsmCadastroProduto.Click += new System.EventHandler(this.tsmCadastroProduto_Click);
             // 
             // tsmConsultaProduto
             // 
             this.tsmConsultaProduto.Name = "tsmConsultaProduto";
             this.tsmConsultaProduto.Size = new System.Drawing.Size(266, 30);
             this.tsmConsultaProduto.Text = "Consulta de produtos";
+            this.tsmConsultaProduto.Click += new System.EventHandler(this.tsmConsultaProduto_Click);
             // 
             // menuVenda
             // 
@@ -184,12 +192,14 @@
             this.tsmNovaVenda.Name = "tsmNovaVenda";
             this.tsmNovaVenda.Size = new System.Drawing.Size(249, 30);
             this.tsmNovaVenda.Text = "Nova venda";
+            this.tsmNovaVenda.Click += new System.EventHandler(this.tsmNovaVenda_Click);
             // 
             // tsmHistoricoVendas
             // 
             this.tsmHistoricoVendas.Name = "tsmHistoricoVendas";
             this.tsmHistoricoVendas.Size = new System.Drawing.Size(249, 30);
             this.tsmHistoricoVendas.Text = "Histórico de vendas";
+            this.tsmHistoricoVendas.Click += new System.EventHandler(this.tsmHistoricoVendas_Click);
             // 
             // menuConfiguracao
             // 
@@ -211,9 +221,11 @@
             // 
             // tsmSair
             // 
+            this.tsmSair.BackColor = System.Drawing.Color.Salmon;
             this.tsmSair.Name = "tsmSair";
             this.tsmSair.Size = new System.Drawing.Size(230, 30);
             this.tsmSair.Text = "Sair";
+            this.tsmSair.Click += new System.EventHandler(this.tsmSair_Click);
             // 
             // statusStrip1
             // 
@@ -305,7 +317,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuCliente;
         private System.Windows.Forms.ToolStripMenuItem tsmCadastroCliente;
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaCliente;
-        private System.Windows.Forms.ToolStripMenuItem tsmCadastroFuncionario;
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaFuncionario;
         private System.Windows.Forms.ToolStripMenuItem tsmCadastroFornecedor;
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaFornecedor;
@@ -328,5 +339,6 @@
         public System.Windows.Forms.ToolStripMenuItem menuFornecedor;
         public System.Windows.Forms.ToolStripStatusLabel txtusuario;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.ToolStripMenuItem tsmCadastroFuncionario;
     }
 }
