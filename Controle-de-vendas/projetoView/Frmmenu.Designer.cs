@@ -294,7 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Controle_de_vendas.Properties.Resources.planodefundo;
+            this.BackgroundImage = global::Controle_de_vendas.Properties.Resources.rpa_concept_with_blurry_hand_touching_screen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1079, 543);
             this.Controls.Add(this.statusStrip1);

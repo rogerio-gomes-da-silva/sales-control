@@ -41,3 +41,7 @@ D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle_de_vendas.p
 D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle_de_vendas.projetoView.Frmdetalhes.resources
 D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle_de_vendas.projetoView.Frmlogin.resources
 D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle_de_vendas.projetoView.Frmmenu.resources
+D:\Projetos\Controle-de-vendas\Controle-de-vendas\bin\Debug\Controle-de-vendas.exe.manifest
+D:\Projetos\Controle-de-vendas\Controle-de-vendas\bin\Debug\Controle-de-vendas.application
+D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle-de-vendas.exe.manifest
+D:\Projetos\Controle-de-vendas\Controle-de-vendas\obj\Debug\Controle-de-vendas.application

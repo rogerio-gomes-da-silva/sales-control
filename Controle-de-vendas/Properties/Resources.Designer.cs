@@ -133,6 +133,16 @@ namespace Controle_de_vendas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rpa_concept_with_blurry_hand_touching_screen {
+            get {
+                object obj = ResourceManager.GetObject("rpa-concept-with-blurry-hand-touching-screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap venda {
             get {
                 object obj = ResourceManager.GetObject("venda", resourceCulture);
