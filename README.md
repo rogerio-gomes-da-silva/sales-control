@@ -6,9 +6,9 @@
 
 # About the project | Sobre o projeto.
 
-The application consists of a sales, stock, employees, customers and suppliers control system. Where the user is able to register and query products, suppliers, customers and employees is thus maintaining full control. 
+The application consists of a sales, stock, employees, customers and suppliers control system. Where the user is able to register and query products, suppliers, customers and employees is thus maintaining full control. Only users as administrator have access to the entire system, other users have reduced access.
 
-A aplicação consiste em um sistema de controle de vendas, estoque, funcionários, clientes e fornecedores. Onde o usuário consegue fazer o cadastro e consulta de produtos, fornecedores, clientes e funcionários é assim manter total controle.
+A aplicação consiste em um sistema de controle de vendas, estoque, funcionários, clientes e fornecedores. Onde o usuário consegue fazer o cadastro e consulta de produtos, fornecedores, clientes e funcionários é assim manter total controle. Obs somente usuários como administrador tem acesso a todo o sistema, os demais usuários têm acesso reduzido.
 
 ## Layout desktop
 ![Desktop 1](https://github.com/rogerio-gomes-da-silva/sales-control/blob/main/Imagens%20do%20projeto/imagem2.JPG)
